@@ -3,57 +3,17 @@
     </head><body>
 <h1>Hello World</h1>
 <p>I'm hosted with GitHub Pages. <b>If you're not TheDude76543210 how did you find this?</b></p>
-<button id="hellobutton" onclick="Test++; roundedG.innerText = abvNum(Test)">Hello
-</button><p>test. <b>test.</b> <s>test.</s> <i>test.</i> <em>test.</em> <q>test.</q> <br> br. <br> </p> <button id="ow" onclick="prompt('Enter code:')"><b>G<i>ROUND</i>ED<b></b></b></button><b><b>
-    </b></b><h1>Heading level 1</h1>
-<h2>Heading level 2</h2>
-<h3>Heading level 3</h3>
-<h4>Heading level 4</h4>
-<h5>Heading level 5</h5>
-<h6>Heading level 6</h6>
-    <script>var Test = 0</script>
-    <script>var tps = 0</script>
-    <button id="OOFOO" onclick="tps++;">Click for auto s</button>
-    <script>function Inc() {Test+= tps; roundedG.innerHTML=abvNum(Test)}</script>
-    <script>setInterval(Inc, 1000)</script>
-    <button onclick="timedText()">Try it</button>
-
-<p id="demo">Click on "Try it".</p>
-
+<br>
+    
+<p>Exponential counter: </p><p id="eP">1</p><br>
 <script>
-var tryit = 1
-function timedText() {
-  setInterval(myTimeout1, 50) 
+    var eNum = 1; var eInc = 1; var eTps = 23
+function eTimer() {
+  setInterval(eFunc, 1000/eTps) 
 }
-function myTimeout1() {
-  tryit*=2
-  document.getElementById("demo").innerHTML = abvNum(tryit)+" gems";
+function eFunc() {
+  eNum*=(eInc^(1/eTps))
+  document.getElementById("eP").innerHTML = eNum;
 }
-const aba = ["","k","M","B","T","Qa","Qi","Sx","Sp","Oc","No","Dc","UD","DD","TD","QaD","QiD","SxD","SpD","OD","ND","Vg","UV","DV","TV","QaV","QiV","SxV","SpV","OV","NV","Tg","UTg","DTg","TTg","QaTg","QiTg","SxTg","SpTg","OTg","NTg","Qag","UQa","DQa","TQa","QaQa","QiQa","SxQa","SpQa","OQa","NQa","Qig","UQi","DQi","TQi","QaQi","QiQi","SxQi","SpQi","OQi","NQi","Sxg","USx","DSx","TSx","QaSx","QiSx","SxSx","SpSx","OSx","NSx","Spg","USp","DSp","TSp","QaSp","QiSp","SxSp","SpSp","OSp","NSp","Og","UOg","DOg","TOg","QaOg","QiOg","SxOg","SpOg","OOg","NOg","Ng","UNg","DNg","TNg","QaNg","QiNg","SxNg","SpNg","ONg","NNg","Ce","UC"]
-
-function abvNum(n) {
-
-  if (n>999999 && n!=Infinity && n!=NaN) {
-    return (Math.floor(n/(1000**Math.floor(Math.log10(n)/3))*1000)/1000)+aba[Math.floor(Math.log10(n)/3)]
-  } else {
-    return Math.floor(n)
-  }
-}
-</script>
-<br><br><br><p>------------</p><br><br><br>
-    <p id="showThat">You have 0 coinz.</p>
-    <button id="get" onclick="coinz+=pC; showThat.innerHTML = 'You have '+abvNum(coinz)+' coinz.'">Get free coin</button>
-    <script>var coinz = 0</script><script>var pC = 1</script><script>var pS = 0</script><script>var CuP = 10</script><script>var SuP = 100</script>
-    <button id="clkupg" onclick="if (coinz>=CuP) {coinz-=CuP; CuP*=1.5; pC+=1; clkupg.innerHTML = 'Upgrade click for '+abvNum(CuP)+' (Current: '+abvNum(pC)+')'}">Upgrade click for 10 (Current: 1)</button>
-    <button id="cpsupg" onclick="if (coinz>=SuP) {coinz-=SuP; SuP*=1.1; pS+=1; cpsupg.innerHTML = 'Upgrade c/sec for '+abvNum(SuP)+' (Current: '+abvNum(pS)+')'}">Upgrade c/sec for 100 (Current: 0)</button>
-<script>setInterval(SecCoins, 50)
-    function SecCoins() {
-        coinz+=(pS/20)
-        showThat.innerHTML = "You have "+abvNum(coinz)+" coinz."
-    }
-    </script>
-<script> var s = 0
-function tmr() {s++}
-setInterval(tmr,1000)
 </script>
 </body></html>
