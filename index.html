@@ -9,10 +9,10 @@
 <script>
     var eNum = 1; var eInc = 1; var eTps = 23
 function eTimer() {
-  setInterval(eFunc, 1000/eTps) 
+  setInterval(eFunc, (1000/eTps)) 
 }
 function eFunc() {
-  eNum*=(eInc^(1/eTps))
+  eNum=(eNum*(eInc^(1/eTps)))
   document.getElementById("eP").innerHTML = eNum;
 }
 </script>
