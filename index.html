@@ -2,7 +2,7 @@
 <html><head><title>Testing thing</title>
     </head><body>
 <h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages. <b>If you're not TheDude76543210 how did you find this?</b> v3</p>
+<p>I'm hosted with GitHub Pages. <b>If you're not TheDude76543210 how did you find this?</b> v4</p>
 <br>
     
 <p>Exponential counter: </p><p id="eP">1</p><br>
@@ -13,7 +13,7 @@ function eTimer() {
 }
 function eFunc() {
   eNum=(eNum*(eInc**(1/eTps)))
-  document.getElementById("eP").innerHTML = eNum;
+  document.getElementById("eP").innerHTML = numberWithCommas(eNum);
 }
 </script>
     
@@ -25,7 +25,13 @@ function lTimer() {
 }
 function lFunc() {
   lNum=(lNum+(lInc/lTps))
-  document.getElementById("lP").innerHTML = lNum;
+  document.getElementById("lP").innerHTML = numberWithCommas(lNum);
+}
+</script>
+
+<script>
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 </script>
 
