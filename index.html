@@ -7,7 +7,7 @@
     
 <p>Exponential counter: </p><p id="eP">1</p><br>
 <script>
-    var eNum = 1; var eInc = 1; var eTps = 23
+    var eNum = 1; var eInc = 1; var eTps = 24
 function eTimer() {
   setInterval(eFunc, (1000/eTps)) 
 }
@@ -16,4 +16,17 @@ function eFunc() {
   document.getElementById("eP").innerHTML = eNum;
 }
 </script>
+    
+<p>Linear counter: </p><p id="lP">0</p><br>
+<script>
+    var lNum = 0; var lInc = 0; var lTps = 24
+function lTimer() {
+  setInterval(lFunc, (1000/lTps)) 
+}
+function lFunc() {
+  lNum=(lNum+(lInc/lTps))
+  document.getElementById("lP").innerHTML = lNum;
+}
+</script>
+
 </body></html>
